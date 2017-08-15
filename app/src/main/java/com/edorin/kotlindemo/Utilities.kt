@@ -8,7 +8,7 @@ import android.widget.Spinner
  */
 
 fun Spinner.selectedItemString() : String {
-    return getSelectedItem().toString()
+    return selectedItem.toString()
 }
 
 fun String.stringExtra(activity: Activity) : String {

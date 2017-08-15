@@ -38,9 +38,9 @@ public class MainActivity extends AppCompatActivity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent();
-                intent.putExtra("firstname", edtFirstname.getText());
-                intent.putExtra("lastname", edtLastname.getText());
+                Intent intent = new Intent(MainActivity.this, SummaryActivity.class);
+                intent.putExtra("firstname", edtFirstname.getText().toString());
+                intent.putExtra("lastname", edtLastname.getText().toString());
                 intent.putExtra("gender", spnGender.getSelectedItem().toString());
                 startActivity(intent);
             }

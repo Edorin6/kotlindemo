@@ -3,7 +3,6 @@ package com.edorin.kotlindemo.kotlin
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.edorin.kotlindemo.R
-import com.edorin.kotlindemo.java.SummaryActivity
 import com.edorin.kotlindemo.selectedItemString
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.startActivity
@@ -22,8 +21,8 @@ class MainActivity : AppCompatActivity() {
         // click listener
         btnSubmit.setOnClickListener {
             startActivity<SummaryActivity>(
-                    "firstname" to edtFirstname.text,
-                    "lastname" to edtLastname.text,
+                    "firstname" to edtFirstname.text.toString(),
+                    "lastname" to edtLastname.text.toString(),
                     "gender" to spnGender.selectedItemString())
         }
     }
